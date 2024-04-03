@@ -87,7 +87,7 @@
         "Salame",
         "Cebola roxa"
       ],
-      "status": "Finalizado",
+      "status": "s.tipo",
       "id": "1"
     },
     {
@@ -98,7 +98,7 @@
         "Salame",
         "Cebola roxa"
       ],
-      "status": "Solicitado",
+      "status": "Finalizado",
       "id": "4"
     },
     {

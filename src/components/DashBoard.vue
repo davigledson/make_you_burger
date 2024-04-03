@@ -26,13 +26,13 @@
                     </ul>
 
                     <div>
-                        <select name="status" class="status">
+                        <select name="status" class="status" @change="updateBurger($event,burger.id)">
                             <option value="">Selecione o status do Hamburger</option>
 
-                            <option v-for="s in status" value="s.tipo" :key="s.id" :selected="burger.status == s.tipo">
-                            {{ s.tipo }}
+                            <option v-for="s in status" :value="s.tipo" :key="s.id" :selected="burger.status == s.tipo">
+                                {{ s.tipo }}
                             </option>
-                            
+
 
                         </select>
                         <button @click="deleteBurger(burger.id)" class="delete-btn">Deletar</button>
@@ -63,15 +63,15 @@ export default {
             //resgatar os status
             this.getStatus();
         },
-        async getStatus(){
+        async getStatus() {
             const req = await fetch("http://localhost:3000/status")
-            const data =  await req.json();
+            const data = await req.json();
             this.status = data;
             console.log(this.status)
         },
-        async deleteBurger(id){
+        async deleteBurger(id) {
             console.log(id)
-            const req = await fetch(`http://localhost:3000/burgers/${id}`,{
+            const req = await fetch(`http://localhost:3000/burgers/${id}`, {
                 method: "DELETE"
             });
             const res = await req.json();
@@ -79,6 +79,17 @@ export default {
             //msg
 
             this.getPedidos();
+        },
+        async updateBurger(event,id) {
+            const option = event.target.value;
+            const dataJson = JSON.stringify({status: option});
+            const req = await fetch(`http://localhost:3000/burgers/${id}`, {
+                method: "PATCH",
+                headers: {"Content-Type": "application/json"},
+                body: dataJson
+            });
+            const res = await req.json();
+            console.log(res)
         }
     },
     mounted() {
