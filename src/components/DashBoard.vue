@@ -35,7 +35,7 @@
                             
 
                         </select>
-                        <button class="delete-btn">Deletar</button>
+                        <button @click="deleteBurger(burger.id)" class="delete-btn">Deletar</button>
                     </div>
 
                 </div>
@@ -68,6 +68,17 @@ export default {
             const data =  await req.json();
             this.status = data;
             console.log(this.status)
+        },
+        async deleteBurger(id){
+            console.log(id)
+            const req = await fetch(`http://localhost:3000/burgers/${id}`,{
+                method: "DELETE"
+            });
+            const res = await req.json();
+
+            //msg
+
+            this.getPedidos();
         }
     },
     mounted() {
