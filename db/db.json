@@ -98,7 +98,7 @@
         "Salame",
         "Cebola roxa"
       ],
-      "status": "Finalizado",
+      "status": "Em produção",
       "id": "4"
     },
     {
@@ -107,7 +107,7 @@
       "carne": null,
       "pao": null,
       "opcionais": [],
-      "status": "solicitado"
+      "status": "Em produção"
     },
     {
       "id": "3b04",

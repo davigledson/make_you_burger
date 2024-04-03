@@ -1,6 +1,7 @@
 <template>
 
     <div id="burger-table">
+        <mensagem :msg="msg" v-show="msg"/>
         <div>
             <div id="burger-table-heading">
                 <div class="order-id">#:</div>
@@ -45,13 +46,18 @@
 </template>
 
 <script>
+import Mensagem from './Mensagem.vue'
 export default {
+    components: {
+        Mensagem
+    },
     name: "Dashboard",
     data() {
         return {
             burgers: null,
             burguer_id: null,
-            status: []
+            status: [],
+            msg: null
         }
     },
     methods: {
@@ -77,6 +83,9 @@ export default {
             const res = await req.json();
 
             //msg
+            this.msg = `Pedido N° ${res.id} removido com sucesso`
+            //limpar msg
+            setTimeout(() => this.msg="", 3000);
 
             this.getPedidos();
         },
@@ -89,7 +98,11 @@ export default {
                 body: dataJson
             });
             const res = await req.json();
-            console.log(res)
+            //console.log(res)
+
+            this.msg = `Pedido N° ${res.id} realizado com atualizado para ${res.status}`
+            //limpar msg
+            setTimeout(() => this.msg="", 3000);
         }
     },
     mounted() {
