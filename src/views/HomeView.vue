@@ -3,11 +3,11 @@
 <template>
   <Banner/>
   
-  <p>banner</p>
+ 
   <main class="main-container">
  <h1>Monte o seu burger</h1>
  <BurguerForm/>
- <p>formulario</p>
+ 
   </main>
 </template>
 

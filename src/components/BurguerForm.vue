@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p> Componente de mensagem</p>
+        
         <div>
             <mensagem :msg="msg" v-show="msg"/>
             <form action="" id="burger-form" @submit="createBurguer">
