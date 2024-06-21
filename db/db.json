@@ -79,81 +79,17 @@
   ],
   "burgers": [
     {
-      "nome": "Matheus Battisti",
+      "id": "521d",
+      "nome": "Davi Gledson da Silva Benedito",
       "carne": "Picanha",
-      "pao": "Italiano Branco",
+      "pao": "Integral",
       "opcionais": [
         "Bacon",
-        "Salame",
-        "Cebola roxa"
-      ],
-      "status": "s.tipo",
-      "id": "1"
-    },
-    {
-      "nome": "João Coelho",
-      "carne": "Maminha",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Salame",
-        "Cebola roxa"
-      ],
-      "status": "Em produção",
-      "id": "4"
-    },
-    {
-      "id": "345f",
-      "nome": null,
-      "carne": null,
-      "pao": null,
-      "opcionais": [],
-      "status": "Em produção"
-    },
-    {
-      "id": "3b04",
-      "nome": null,
-      "carne": null,
-      "pao": null,
-      "opcionais": [],
-      "status": "solicitado"
-    },
-    {
-      "id": "cb5f",
-      "nome": "ggggg",
-      "carne": "Alcatra",
-      "pao": "3 Queijos",
-      "opcionais": [
+        "Pepino",
         "Cebola roxa",
         "Cheddar"
       ],
-      "status": "solicitado"
-    },
-    {
-      "id": "b9b7",
-      "nome": null,
-      "carne": null,
-      "pao": null,
-      "opcionais": [],
-      "status": "solicitado"
-    },
-    {
-      "id": "5a0b",
-      "nome": null,
-      "carne": null,
-      "pao": null,
-      "opcionais": [],
-      "status": "solicitado"
-    },
-    {
-      "id": "8f15",
-      "nome": "fgfdgfdg",
-      "carne": "Alcatra",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Salame",
-        "Pepino"
-      ],
-      "status": "solicitado"
+      "status": "Em produção"
     }
   ]
 }

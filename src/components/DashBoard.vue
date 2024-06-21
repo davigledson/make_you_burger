@@ -13,20 +13,21 @@
             </div>
             <div id="burger-table-rows">
 
-                <div class="burger-table-row" v-for="burger in burgers" :key="burger.id">{{ burger.id }}>
+                <div class="burger-table-row" v-for="burger in burgers" :key="burger.id">
+                    
                     <div class="order-number">{{ burger.id }} </div>
                     <div>{{ burger.nome }}</div>
                     <div>{{ burger.pao }}</div>
                     <div>{{ burger.carne }}</div>
 
-                    <ul>
+                    <ul class="opc-container">
                         <li v-for="(opcional, index) in burger.opcionais" :key="index">
                             {{ opcional }}
                         </li>
 
                     </ul>
 
-                    <div>
+                    <div class="acoes-container">
                         <select name="status" class="status" @change="updateBurger($event,burger.id)">
                             <option value="">Selecione o status do Hamburger</option>
 
@@ -150,7 +151,13 @@ select {
     padding: 12px 6px;
     margin-right: 12px;
 }
-
+.opc-container{
+    margin-left:-50px ;
+}
+.acoes-container{
+    display: flex;
+    margin-left:50px ;
+}
 .delete-btn {
     background-color: #222;
     color: #fcba03;

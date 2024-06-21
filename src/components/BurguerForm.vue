@@ -152,7 +152,7 @@ label {
 input,
 select {
     padding: 5px 15px;
-    width: 300px;
+    /* width: 300px; */
 
 }
 
@@ -175,7 +175,7 @@ select {
 
 .checkbox-container input,
 .checkbox-container span {
-    margin-left: 6px;
+    margin-left: 20px;
     font-weight: bold;
 }
 
