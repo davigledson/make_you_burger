@@ -1,6 +1,5 @@
 # make_you_burger
 
-This template should help get you started developing with Vue 3 in Vite.
 
 ![animacao_burger](https://github.com/davigledson/make_you_burger/assets/107668423/db4eb6df-7611-4781-a64c-57e2c07b836e)
 
